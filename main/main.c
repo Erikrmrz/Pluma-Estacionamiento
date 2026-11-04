@@ -67,7 +67,7 @@ static void cred_id(const rc522_uid_t *u, char out[9])
     snprintf(out, 9, "%02x%02x%02x%02x", h[0], h[1], h[2], h[3]);
 }
 
-
+static void log_event(const char *disposition, const rc522_uid_t *u)
 {
     char id[9] = "--------";
     if (u) cred_id(u, id);
